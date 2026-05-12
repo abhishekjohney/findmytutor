@@ -212,7 +212,7 @@ export default function ParentRegistrationPage() {
               <Select
                 value={watchedArea || ""}
                 onValueChange={(v) =>
-                  setValue("area", v, { shouldValidate: true })
+                  setValue("area", v || "", { shouldValidate: true })
                 }
               >
                 <SelectTrigger
@@ -261,7 +261,7 @@ export default function ParentRegistrationPage() {
                 <Select
                   value={watchedGrade || ""}
                   onValueChange={(v) =>
-                    setValue("childGrade", v, { shouldValidate: true })
+                    setValue("childGrade", v || "", { shouldValidate: true })
                   }
                 >
                   <SelectTrigger
