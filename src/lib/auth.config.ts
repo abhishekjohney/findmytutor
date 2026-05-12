@@ -3,6 +3,7 @@ import type { NextAuthConfig } from "next-auth";
 // Notice this is only the config object, not the full NextAuth execution.
 // This does NOT include the Prisma adapter or OAuth providers, so it can run safely on the Edge (Middleware).
 export default {
+  secret: process.env.AUTH_SECRET,
   providers: [],
   session: { strategy: "jwt" },
   pages: {
